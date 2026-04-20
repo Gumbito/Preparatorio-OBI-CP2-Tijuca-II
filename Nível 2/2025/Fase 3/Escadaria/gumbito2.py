@@ -28,4 +28,4 @@ for pos_atual in range(primeira_pos, qdegraus):
 for i in range(ultima_pos + 1, qdegraus):
     alturas[i] = alturas[i-1] + 1
 
-print(*alturas, sep=' ')
+print(*alturas)

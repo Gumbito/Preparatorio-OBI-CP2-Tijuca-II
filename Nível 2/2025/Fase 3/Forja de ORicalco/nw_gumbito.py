@@ -31,6 +31,6 @@ while len(impurezas) >= tamanho_conjunto:
     print(f'intervalo para ORar: # {max_index+1}')
     impurezas = impurezas[: max_index] + impurezas[max_index + tamanho_conjunto:] 
     impurezas.insert(max_index, max_or)
-    print(*impurezas, sep=' ')
+    print(*impurezas)
 
 print(sum(impurezas))

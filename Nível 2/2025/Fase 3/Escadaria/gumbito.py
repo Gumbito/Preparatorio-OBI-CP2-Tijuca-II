@@ -32,5 +32,5 @@ for i in range(len(posicoes) - 1):
         
         alturas[pos_atual] = altura_atual
 
-print(*alturas, sep=' ')
+print(*alturas)
 
