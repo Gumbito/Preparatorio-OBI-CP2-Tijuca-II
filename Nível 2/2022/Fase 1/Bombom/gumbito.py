@@ -6,21 +6,29 @@ VALORES = {
 }
 BONUS_DOMINANTE = +4
 
-QJOGADORES = 2
 CARTAS_POR_JOGADOR = 3
-NOMES = ['Luana', 'Edu']
 
-naipe_dominante = input()[1]
+JOGADORES = ('Luana', 'Edu')
 
-pontos = [0] * QJOGADORES
-for i in range(QJOGADORES):
+figura_tanto_faz, naipe_dominante = input()
+
+pontos = [0] * len(JOGADORES)
+for i in range(len(JOGADORES)):
     for _ in range(CARTAS_POR_JOGADOR):
         figura, naipe = input()
         valor_carta = VALORES[figura] + (BONUS_DOMINANTE if naipe == naipe_dominante else 0)
         pontos[i] += valor_carta
 
 maior_pontuacao = max(pontos)
-if pontos.count(maior_pontuacao) > 1: print('empate')
-else: print(NOMES[pontos.index(maior_pontuacao)])
+if pontos.count(maior_pontuacao) > 1:
+    print('empate')
+else:
+    index_do_maioral = pontos.index(maior_pontuacao)
+    print(JOGADORES[index_do_maioral])
 
-# percorrendo a lista 3 vezes por que eu quero e posso :)
+# isso escala com a quantidade de jogadores, mas não muito bem,
+# já que na verificação de ganhadores,
+# a tuple de jogadores é percorrida 3 vezes.
+# é possível diminuir isso pra 2 ou até 1
+# sem falar que em algumas vezes percorrendo a tuple,
+# o processo continua mesmo podendo parar antes de realmente percorrer tudo

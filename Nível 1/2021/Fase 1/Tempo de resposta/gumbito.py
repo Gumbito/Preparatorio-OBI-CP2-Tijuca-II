@@ -1,4 +1,6 @@
 # tipos de registro:
+# (eu quando deixo meu código legível:)
+# ((coff coff))
 INTERVALO_DE_TEMPO = 'T'
 MENSAGEM_RECEBIDA =  'R'
 MENSAGEM_ENVIADA =   'E'
@@ -27,7 +29,8 @@ for _ in range(qregistros):
         espera(tempo - 1)
         continue
 
-    espera(1) # o intervalo de tempo default entre dois registros de eventos consecutivos é 1 segundo
+    # espera o intervalo de tempo default entre dois registros de eventos consecutivos (1 segundo)
+    espera(1) 
 
     id_amigo = argumento
     if tipo_registro == MENSAGEM_RECEBIDA:
@@ -39,3 +42,5 @@ for _ in range(qregistros):
 
 for id_amigo, amigo in sorted(amigos.items(), key=lambda x: x[0]):
     print(f'{id_amigo} {amigo.tempo_total_esperando if amigo.respondido else -1}')
+
+# ainda bem que a questão não manda mais de um registro de tempo seguido

@@ -1,3 +1,5 @@
+# eu gosto de constantes, elas geralmente deixam o código mais entendível
+
 EMOTICON_DIVERTIDO = ':-)'
 EMOTICON_CHATEADO =  ':-('
 

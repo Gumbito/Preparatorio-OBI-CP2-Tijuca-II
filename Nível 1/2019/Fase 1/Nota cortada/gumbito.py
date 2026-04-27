@@ -12,4 +12,4 @@ if   pedaco1 > metade_area_total: print(1)
 elif pedaco1 < metade_area_total: print(2)
 else:                             print(0)
 
-# Obs.: não tem floating-point imprecision aqui porque as divisões são sempre por 2 e o numerador é sempre inteiro e pequeno suficiente
+# Obs.: não tem floating-point imprecision aqui porque as divisões são sempre por 2 e o numerador é sempre inteiro pequeno suficiente

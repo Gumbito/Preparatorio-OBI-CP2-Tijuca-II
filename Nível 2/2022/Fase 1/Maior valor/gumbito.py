@@ -7,3 +7,8 @@ for num in range(fim, inicio - 1, -1):
         exit()
 
 print(-1)
+
+# deve ter um jeito de fazer isso sem percorrer número por número
+# hmm...
+# 
+# é bem possível que tenha mesmo
